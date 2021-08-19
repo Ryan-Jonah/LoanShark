@@ -1,0 +1,173 @@
+/* ------FONTS------ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* ------VARIABLES------ */
+:root {
+    --primary-color:   #1D5888;
+    --secondary-color: #FF993B;
+    --dark-color:      #292929;
+    --white-color:     #eff0ff;
+
+    --synthwave-purple:    #461E52;
+    --synthwave-pink:      #DD517F;
+    --synthwave-orange:    #E68E36;
+    --synthwave-darkBlue:  #556DC8;
+    --synthwave-lightBlue: #7998EE;
+
+    --console-primary:       #009C00;
+    --console-primary-hover: #00FF00;
+    --console-dark:          #1C1D1C; 
+    --console-darker:        #131413;
+
+    --orbitron-font: 'Orbitron', sans-serif;
+}
+
+/* ------GLOBAL------ */
+* {
+    font-family: var(--orbitron-font)
+}
+
+::selection{
+    background: var(--console-dark);
+    color: var(--console-primary-hover);
+}
+
+/* Remove Arrows from input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ------COLORS------ */
+body {
+    color: var(--console-darker);
+    background-color: var(--console-dark);
+}
+
+nav {
+    background-color: var(--console-darker);
+    color: var(--console-primary);
+}
+
+footer {
+    background-color: var(--console-darker);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--console-primary);
+}
+
+.navbar-brand, .nav-link, .text-green, .icon-green, .border-green {
+    color: var(--console-primary) !important;
+} 
+
+/* ICONS */
+.bsicon{
+    color: #8312FA;
+}
+
+.jsicon{
+    color: #F0DB4F;
+}
+
+.html5icon{
+    color: #E44D26;
+}
+
+.cssicon{
+    color: #0A71B8;
+}
+
+/* FORMS */
+.button-green {
+    color: var(--white-color);
+    background-color: var(--console-primary);
+    border: 3px solid var(--console-darker);
+}
+
+.input-green {
+    background-color: var(--console-primary);
+    color: var(--console-darker);
+    font-weight: bold;
+    border: 3px solid var(--console-darker);
+}
+
+.input-green:focus {
+    background-color: var(--console-primary-hover);
+    border-color: var(--console-primary-hover); 
+    box-shadow: none;
+}
+
+/* ------TABLE------ */
+table, td, thead {
+    border-style: none;
+}
+
+tr:nth-child(odd){
+    background-color: var(--console-dark);
+    border-bottom: 1px solid var(--console-primary);
+}
+
+tr:nth-child(even){
+    background-color: var(--console-darker);
+    border-bottom: 1px solid var(--console-primary);
+}
+
+/* ------HOVER------ */
+.navbar-brand:hover, .nav-link:hover, .nav-active {
+    color: var(--console-primary-hover) !important;
+    text-shadow: 0 0 2px var(--console-primary-hover);
+} 
+
+.icon-green:hover {
+    text-shadow: 0 0 4px var(--console-primary-hover);
+    color: var(--console-primary-hover) !important;
+}
+
+.navbar-toggler, .text-green-strong {
+    color:var(--console-primary-hover);
+}
+
+.button-green:hover {
+    background-color: var(--console-primary-hover);
+}
+
+/* ------MISC------ */
+.container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+}
+.sticky-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* PRISM */
+code[class="language-"],
+pre[class="language-"] {
+white-space: pre-wrap;
+word-break: break-all;
+word-wrap: break-word;
+}
+
+/* ------ MISC ------ */
+.bottom-border{
+    border-bottom: solid 2px var(--console-primary);
+}
+
+/* ------ MEDIA QUERIES ------ */
+@media only screen and (min-width: 992px){
+    .side-border{
+        border-right: solid 2px var(--console-primary);
+    }
+}
