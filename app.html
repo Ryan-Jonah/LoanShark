@@ -58,7 +58,66 @@
 
     <!-- MAIN Section  -->
     <main class="flex-shrink-0">
-      
+      <div class="container">
+          <div class="row row-cols-lg-2 row-cols-1 mt-3">
+                <div class="col  top-border bottom-border darker-bg p-3">
+                    <h1>LoanShark</h1>
+                    <form class="row row-cols-1">
+                        <div class="col">
+                            <label for="inputLoanAmount" class="text-green-strong">Loan Amount</label>
+                            <input type="number" id="inputLoanAmount" class="form-control input-green" value=15000 placeholder="Amount" aria-placeholder="Loan Amount" required>
+                        </div>
+                        <div class="col">
+                            <label for="inputLoanPayments" class="text-green-strong"># Payments</label>
+                            <input type="number" id="inputLoanPayments" class="form-control input-green" value=60 placeholder="Payments" aria-placeholder="Number of Payments" required>
+                        </div>
+                        <div class="col">
+                            <label for="inputLoanRate" class="text-green-strong">Interset Rate</label>
+                            <input type="number" id="inputLoanRate"  class="form-control input-green" value=3 placeholder="Rate" aria-placeholder="Interest Rate" required>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end mt-3">
+                            <button type="button" id="btnSubmit" class="btn-lg button-green">Submit</button>
+                        </div>
+                    </form>
+                </div>  
+                <div class="col top-border bottom-border darker-bg">
+                    <div class="row row-cols-2 mx-3">
+                        <div class="col-12">
+                            <h2 class="mt-5 mb-4 pb-3 d-flex justify-content-center bottom-border">Your Monthly Payment:</h2>
+                        </div>
+                        <div class="col-12">
+                            <h1 class="my-4 d-flex justify-content-center text-green-strong"><span id="totalMonthlyPayment" class="animate-price"></span></h1>
+                        </div>
+                        <div class="col d-flex justify-content-evenly mt-3">
+                            <p>Total Principal: </p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly mt-3">
+                            <p id="totalPrincipalResult"></p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly">
+                            <p>Total Interest: </p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly">
+                            <p id="totalInterestResult"></p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly">
+                            <p>Total Cost: </p>
+                        </div>
+                        <div class="col d-flex justify-content-evenly">
+                            <p id="totalCostResult"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+          </div>
+          <div class="row row-cols-1 m-5">
+              <div class="col">
+                  <table class="table table-sm" id="tableResults">
+                        <!-- Template Results -->
+                  </table>
+              </div>
+          </div>
+      </div>
     </main>
 
     <!-- FOOTER Section -->
@@ -93,6 +152,29 @@
         </div>
     </footer>
 
+
+    <template id='headTemplate'>
+        <thead>
+            <th class="text-green-strong"></th>
+            <th class="text-green-strong"></th>
+            <th class="text-green-strong"></th>
+            <th class="text-green-strong"></th>
+            <th class="text-green-strong"></th>
+            <th class="text-green-strong"></th>
+        </thead>
+    </template>
+
+    <template id='rowTemplate'>
+        <tr>
+            <td class="text-green"></td>
+            <td class="text-green"></td>
+            <td class="text-green"></td>
+            <td class="text-green"></td>
+            <td class="text-green"></td>
+            <td class="text-green"></td>
+        </tr>
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -103,6 +185,9 @@
 
     <!-- External JS -->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById('btnSubmit').addEventListener('click', gatherInput)
+    </script>
 </body>
 
 </html>
