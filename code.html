@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Ryan Jonah</title>
+    <title>Loan Shark: A coding project by Ryan Jonah</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <div class="container-fluid">
             <img src="/img/RyanJ_Icon.svg" width="50" alt="Logo" class="d-inline me-2 ms-3">
-            <span class="fw-bold ms-2 fs-2 brand-title">App Name</span>
+            <span class="fw-bold ms-2 fs-2 brand-title">Loan Shark</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -114,7 +114,7 @@
                                 //Used in for loop to determine previous statement's balance
                                 let previousRemainingBalance = loanAmount;
                             
-                                for (let index = 0; index < numberOfPayments; index++) {
+                                for (let index = 0; index &lt; numberOfPayments; index++) {
                                     //Statement object used for holding calculation results for current idividual month
                                     let statement = {};
                             
@@ -153,7 +153,7 @@
                                 let totalPrincipal = 0;
                                 let totalInterest  = 0;
                             
-                                for (let index = 0; index < statements.length; index++) {
+                                for (let index = 0; index &lt; statements.length; index++) {
                                     totalPrincipal += statements[index].principalPayment;
                                     totalInterest += statements[index].interestPayment;
                                 }
@@ -180,13 +180,13 @@
                                 tableBody.appendChild(tableHead);
                             
                                 //Generate table Body
-                                tableBody.innerHTML += "<tbody>";
+                                tableBody.innerHTML += "&lt;tbody>";
                             
                                 //Reset to calculate each monthly total
                                 totalInterest = 0;
                             
                                 //Create each table row using objects created in generateReport()
-                                for (let index = 0; index < statements.length; index++) {
+                                for (let index = 0; index &lt; statements.length; index++) {
                                     totalInterest += statements[index].interestPayment;
                             
                                     let tableRow = document.importNode(templateRow.content, true);
@@ -202,7 +202,7 @@
                             
                                     tableBody.appendChild(tableRow);
                                 }
-                                tableBody.innerHTML += "<tbody>";
+                                tableBody.innerHTML += "&lt;tbody>";
                             }
                         </code>
                     </pre>

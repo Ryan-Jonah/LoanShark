@@ -97,9 +97,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* FORMS */
 .button-green {
-    color: var(--white-color);
+    color: var(--console-darker);
     background-color: var(--console-primary);
     border: 3px solid var(--console-darker);
+    font-weight: bold;
 }
 
 .input-green {
