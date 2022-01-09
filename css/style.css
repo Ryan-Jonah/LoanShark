@@ -166,6 +166,10 @@ tr:nth-child(even){
     width: 100%;
 }
 
+.font-sm {
+    font-size: 0.8em;
+}
+
 /* PRISM */
 code[class="language-"],
 pre[class="language-"] {
